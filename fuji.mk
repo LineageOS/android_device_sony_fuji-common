@@ -70,6 +70,13 @@ PRODUCT_PACKAGES += \
     audio_policy.conf \
     libaudioutils
 
+# Audio HW Codecs
+PRODUCT_PACKAGES += \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc
+
 PRODUCT_COPY_FILES += \
     device/sony/fuji-common/config/media_codecs.xml:system/etc/media_codecs.xml
 
