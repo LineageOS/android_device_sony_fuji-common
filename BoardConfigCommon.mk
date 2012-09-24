@@ -4,9 +4,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 BOARD_HAS_NO_MISC_PARTITION := true
 
-#kernel properties
+# Kernel properties
 TARGET_KERNEL_SOURCE := kernel/sony/msm8660
-BOARD_USES_UNCOMPRESSED_BOOT := true
+#BOARD_USES_UNCOMPRESSED_BOOT := true
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 
 # Platform
@@ -38,7 +38,7 @@ BOARD_KERNEL_CMDLINE := # This is ignored by sony's bootloader
 BOARD_KERNEL_BASE := 0x40200000
 BOARD_RECOVERY_BASE := 0x40200000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_FORCE_RAMDISK_ADDRESS := 0x41200000
+BOARD_FORCE_RAMDISK_ADDRESS := 0x41500000
 
 # Wifi related defines
 BOARD_WLAN_DEVICE                := bcmdhd
@@ -51,10 +51,6 @@ WIFI_DRIVER_FW_PATH_STA          := "/vendor/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/vendor/firmware/fw_bcmdhd_p2p.bin"
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
-
-# Bluetooth
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Graphics
 USE_OPENGL_RENDERER := true
