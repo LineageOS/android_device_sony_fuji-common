@@ -204,3 +204,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # ALS
 PRODUCT_PROPERTY_OVERRIDES += \
    ro.hardware.respect_als=true
+
+# Audio LPA
+PRODUCT_PROPERTY_OVERRIDES += \
+   lpa.decode=false \
+   lpa.use-stagefright=true
