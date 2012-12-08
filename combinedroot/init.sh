@@ -8,6 +8,10 @@ busybox date >>boot.txt
 exec >>boot.txt 2>&1
 busybox rm /init
 
+#Cap max CPU freq to avoid issues with overclocked kernels
+busybox echo 1512000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+busybox echo 1512000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
+
 # include device specific vars
 source /sbin/bootrec-device
 
