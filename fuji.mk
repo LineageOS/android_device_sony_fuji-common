@@ -58,6 +58,13 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+# FM Radio
+PRODUCT_PACKAGES += \
+    FmRadioReceiver
+
+PRODUCT_COPY_FILES += \
+    frameworks/base/data/etc/com.stericsson.hardware.fm.receiver.xml:system/etc/permissions/com.stericsson.hardware.fm.receiver.xml
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
 
